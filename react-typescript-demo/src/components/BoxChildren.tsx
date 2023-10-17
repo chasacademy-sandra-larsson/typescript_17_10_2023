@@ -1,12 +1,12 @@
 import { PropsWithChildren } from "react";
 
 interface BoxProps {
-    children: React.ReactNode;
   color?: "red" | "green" | "yellow";
 }
 
+// Or include children in inteface and leave PropsWithChildrenOut
 
-const Box = ({children, color = "green"} : BoxProps )=> {
+const Box = ({children, color = "green"} : PropsWithChildren<BoxProps> )=> {
     return (
       <section
         style={{ padding: '1em', border: '5px solid purple', color}}
